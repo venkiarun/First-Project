@@ -12,6 +12,10 @@
   <tbody>
     <% @books.each do |book| %>
       <tr>
+          <td><b>Book Name</b></td>
+          <td colspan="3"></td>
+      </tr>
+      <tr>
         <td><%= book.name %></td>  
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
