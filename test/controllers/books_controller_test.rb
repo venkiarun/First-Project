@@ -23,6 +23,14 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
     assert_equal(last_book.name , "TestBook")
   end
 
+    test "should not create book" do
+    assert_difference('Book.count') do
+      post books_url, params: { book: { name: "Test Book" } }
+    end
+    last_book = Book.last
+    assert_equal(last_book.name , "TestBook")
+  end
+
   test "should show book" do
     get book_url(@book)
     assert_response :success
