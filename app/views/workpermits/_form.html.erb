@@ -1,0 +1,22 @@
+<%= form_with(model: workpermit, local: true) do |form| %>
+  <%= text_field :workpermit, :first_name %>
+  <%= text_field :workpermit, :last_name %>
+  <%= text_field :workpermit, :status %>
+  <%= text_field :workpermit, :start_date %>
+  <%= text_field :workpermit, :end_date %>
+  <% if workpermit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(workpermit.errors.count, "error") %> prohibited this workpermit from being saved:</h2>
+
+      <ul>
+      <% workpermit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module WorkpermitsHelper
+end
