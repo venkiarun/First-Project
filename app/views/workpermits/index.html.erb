@@ -12,6 +12,15 @@
   <tbody>
     <% @workpermits.each do |workpermit| %>
       <tr>
+          <td><b>First Name</b></td>
+          <td><b>Last Name</b></td>
+          <td><b>Status</b></td>
+          <td colspan="=3"><b>Actions</b></td>
+      </tr>
+      <tr>
+        <td><%= workpermit.first_name %></td>
+          <td><%= workpermit.last_name %></td>
+          <td><%= workpermit.status %></td>
         <td><%= link_to 'Show', workpermit %></td>
         <td><%= link_to 'Edit', edit_workpermit_path(workpermit) %></td>
         <td><%= link_to 'Destroy', workpermit, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_workpermit_path(@workpermit) %> |
+First Name <%= @workpermit.first_name %> <br>
+Last Name <%= @workpermit.last_name %> <br>
+Start Date <%= @workpermit.start_date %> <br>
+End Date <%= @workpermit.end_date %> <br>
+Status <%= @workpermit.status %> <br> <br>
+<%= link_to 'Edit', altedit_workpermit_path(@workpermit) %> |
 <%= link_to 'Back', workpermits_path %>

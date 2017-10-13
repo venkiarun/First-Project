@@ -33,7 +33,7 @@ class WorkpermitsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update workpermit" do
-    patch workpermit_url(@workpermit), params: { workpermit: {  } }
+    patch workpermit_url(@workpermit), params: { workpermit: { first_name: "FN", last_name:"LN", start_date: "12/01/1981", end_date: "12/01/1999", status:"open" } }
     assert_redirected_to workpermit_url(@workpermit)
   end
 
@@ -41,7 +41,6 @@ class WorkpermitsControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Workpermit.count', -1) do
       delete workpermit_url(@workpermit)
     end
-
     assert_redirected_to workpermits_url
   end
 end

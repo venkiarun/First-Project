@@ -1,5 +1,5 @@
 class WorkpermitsController < ApplicationController
-  before_action :set_workpermit, only: [:show, :edit, :update, :destroy]
+  before_action :set_workpermit, only: [:show, :edit, :update, :destroy, :altedit]
 
   # GET /workpermits
   # GET /workpermits.json
@@ -19,6 +19,11 @@ class WorkpermitsController < ApplicationController
 
   # GET /workpermits/1/edit
   def edit
+  end
+
+  # GET /workpermits/1/altedit
+  def altedit
+      
   end
 
   # POST /workpermits
